@@ -1,4 +1,4 @@
-// 2109번: 순회 강연
+// 2109번: 순회 강연 (실패)
 #include <bits/stdc++.h>
 using namespace std;
 
