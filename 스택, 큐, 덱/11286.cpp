@@ -22,16 +22,9 @@ int n;
 // public:
 // 	bool operator()(const int& a, const int& b)
 // 	{
-//         if (abs(a) >= abs(b)){
-//             if (abs(a) == abs(b)){
-//                 if (a > b){
-//                     return true;
-//                 }
-//                 return false;
-//             }
-//             return true;
-//         }
-//         return false;
+//         if (abs(a) == abs(b)) 
+//             return a > b;
+//         else return abs(a) > abs(b);
 // 	}
 // };
 struct comp {
