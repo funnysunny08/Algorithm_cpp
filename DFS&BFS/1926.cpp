@@ -3,8 +3,8 @@
 using namespace std;
 
 int n, m;
-int graph[500][500];
-// int visited[500][500];
+int graph[501][501];
+int visited[501][501];
 vector<int> result;
 int cnt;
 
@@ -15,8 +15,8 @@ int dy[] = {0, 0, -1, 1};
 bool dfs (int x, int y) {
     if (x <= -1 || x >= n || y <= -1 || y >= m) return false;
 
-    if (graph[x][y] == 1) {
-        graph[x][y] = 2;
+    if (graph[x][y] == 1 && visited[x][y] == 0) {
+        visited[x][y] = 1;
         cnt++;
         for (int i = 0; i < 4; i++) {
             int nx = x + dx[i];
@@ -50,5 +50,7 @@ int main(void) {
     cout << result.size() << endl;
     if (result.size() != 0) {
         cout << result[0] << endl;
+    } else {
+        cout << 0 << endl;
     }
 }
